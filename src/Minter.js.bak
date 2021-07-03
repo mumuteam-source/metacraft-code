@@ -1,0 +1,180 @@
+import React, { useEffect, useState } from "react";
+import { connectWallet,mintNFT } from "./utils/interact.js";
+import LoginIcon from '@material-ui/icons/AccountCircle';
+import AppBar from '@material-ui/core/AppBar';
+import Button from '@material-ui/core/Button';
+import CameraIcon from '@material-ui/icons/PhotoCamera';
+import Card from '@material-ui/core/Card';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import CardMedia from '@material-ui/core/CardMedia';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import Grid from '@material-ui/core/Grid';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
+import { makeStyles } from '@material-ui/core/styles';
+import Container from '@material-ui/core/Container';
+import Link from '@material-ui/core/Link';
+
+function Copyright() {
+  return (
+      <Typography variant="body2" color="textSecondary" align="center">
+       {'Copyright © '}
+       <Link color="inherit" href="http://nftstore.top/">
+         NFTStore, NFT Everything 
+       </Link>{' '}
+       {new Date().getFullYear()}
+       {'.'}
+      </Typography>
+    );
+}
+
+const useStyles = makeStyles((theme) => ({
+  icon: {
+      marginRight: theme.spacing(2),
+    },
+  heroContent: {
+      backgroundColor: theme.palette.background.paper,
+      padding: theme.spacing(8, 0, 6),
+    },
+  heroButtons: {
+      marginTop: theme.spacing(4),
+    },
+  cardGrid: {
+      paddingTop: theme.spacing(8),
+      paddingBottom: theme.spacing(8),
+    },
+  card: {
+      height: '100%',
+      display: 'flex',
+      flexDirection: 'column',
+    },
+  cardMedia: {
+      paddingTop: '56.25%', // 16:9
+    },
+  cardContent: {
+      flexGrow: 1,
+    },
+  footer: {
+      backgroundColor: theme.palette.background.paper,
+      padding: theme.spacing(6),
+    },
+}));
+
+const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+const Minter = (props) => {
+const classes = useStyles();  
+//State variables
+  const [isConnected, setConnectedStatus] = useState(false);
+  const [walletAddress, setWallet] = useState("");
+  const [status, setStatus] = useState("");
+  const [name, setName] = useState("");
+  const [description, setDescription] = useState("");
+  const [url, setURL] = useState("");
+ 
+useEffect(async () => {
+  if (window.ethereum) { //if Metamask installed
+      try {
+       const accounts = await window.ethereum.request({ method: "eth_accounts" }) //get Metamask wallet
+       if (accounts.length) { //if a Metamask account is connected
+            setConnectedStatus(true);
+            setWallet(accounts[0]);
+       } else {
+          setConnectedStatus(false);
+          setStatus("Connect to Metamask using the top right button.");
+       }
+     } catch {
+        setConnectedStatus(false);
+       setStatus(
+        "Connect to Metamask using the top right button. " +
+         walletAddress
+      );
+     }
+   }  
+});
+  const connectWalletPressed = async () => { //TODO: implement
+	 const walletResponse = await connectWallet();
+	      setConnectedStatus(walletResponse.connectedStatus);
+	      setStatus(walletResponse.status);
+	      if (isConnected) {
+	            setWallet(walletAddress);
+          }
+   
+  };
+
+  const onMintPressed = async () => { //TODO: implement
+      const {status} = await mintNFT(url,name,description);
+  };
+
+  return (
+   <React.Fragment>
+     <CssBaseline />
+       <AppBar position="relative">
+         <Toolbar>
+         <CameraIcon className={classes.icon} />
+         <Typography variant="h6" color="inherit" noWrap>
+           NFTStore 
+         </Typography>
+         </Toolbar>
+       </AppBar>
+    <div className="Minter">
+      <Button startIcon={<LoginIcon />} variant="contained" color="primary" id="walletButton"  onClick={connectWalletPressed}>
+        {isConnected ? (
+          "Connected: " +
+          String(walletAddress).substring(0, 6) +
+          "..." +
+          String(walletAddress).substring(38)
+        ) : (
+          <span>👛 Connect Wallet</span>
+        )}
+      </Button>
+
+      <br></br>
+      <h1 id="title">NFT Minter</h1>
+      <p>
+        Simply add your asset's link, name, and description, then press "Mint."
+      </p>
+      <form>
+        <h2>Link to asset: </h2>
+        <input
+          type="text"
+          placeholder="e.g. https://gateway.pinata.cloud/ipfs/<hash>"
+          onChange={(event) => setURL(event.target.value)}
+        />
+        <h2>Name: </h2>
+        <input
+          type="text"
+          placeholder="e.g. My first NFT!"
+          onChange={(event) => setName(event.target.value)}
+        />
+        <h2>Description: </h2>
+        <input
+          type="text"
+          placeholder="e.g. Even cooler than cryptokitties ;)"
+          onChange={(event) => setDescription(event.target.value)}
+        />
+      </form>
+      <button id="mintButton" onClick={onMintPressed}>
+        Mint NFT
+      </button>
+      <p id="status">
+        {status}
+      </p>
+    </div>
+    {/* Footer */}
+        <footer className={classes.footer}>
+          <Typography variant="h6" align="center" gutterBottom>
+          NFTStore
+	  </Typography>
+          <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
+            nftstore.top
+          </Typography>
+          <Copyright />
+       </footer>
+   {/* End footer */}
+  </React.Fragment>
+  );
+};
+
+export default Minter;
