@@ -1,4 +1,4 @@
-NFT-Store has deployed in polygon mumbai network. 
+NFT-Store has deployed in [polygon](https://polygon.technology)  mumbai network. 
 with  ERC20 Tokens to sell/buy, auction/bid, transfer ERC721 tokens
 
 # NFTStore -  Everything Can be turned into NFT
