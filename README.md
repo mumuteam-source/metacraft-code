@@ -38,7 +38,7 @@ sudo npm explore npm -g -- npm install node-gyp@latest # Update node-gyp
 
 ### Deploying to the Rinkeby network.
 
-1. To access a Rinkeby testnet node, you'll need to sign up for [Alchemy](https://dashboard.alchemyapi.io/signup?referral=affiliate:e535c3c3-9bc4-428f-8e27-4b70aa2e8ca5) and get a free API key. Click "View Key" and then copy the part of the URL after `v2/`.
+1. To access a Rinkeby testnet node, you'll need to sign up for [Alchemy] and get a free API key. Click "View Key" and then copy the part of the URL after `v2/`.
    a. You can use [Infura](https://infura.io) if you want as well. Just change `ALCHEMY_KEY` below to `INFURA_KEY`.
 2. Using your API key and the mnemonic for your Metamask wallet (make sure you're using a Metamask seed phrase that you're comfortable using for testing purposes), run:
 
@@ -50,12 +50,12 @@ DEPLOY_CREATURES_SALE=1 yarn truffle deploy --network rinkeby
 
 ### Minting tokens.
 
-After deploying to the Rinkeby network, there will be a contract on Rinkeby that will be viewable on [Rinkeby Etherscan](https://rFor example, here is a [recently deployed contract](https://rinkeby.etherscan.io/address/[youraddress]). You should set this contract address and the address of your Metamask account as environment variables when running the minting script. 
+After deploying to the Rinkeby network, there will be a contract on Rinkeby that will be viewable on [Rinkeby Etherscan]. You should set this contract address and the address of your Metamask account as environment variables when running the minting script. 
 
 ```
 export OWNER_ADDRESS="<my_address>"
 export NFT_CONTRACT_ADDRESS="<deployed_contract_address>"
 export NETWORK="rinkeby"
-node scripts/mint.js
+node src/pages/minter.js
 ```
 
