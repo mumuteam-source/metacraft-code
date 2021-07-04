@@ -1,4 +1,6 @@
-# nftstore-code   -    Basic ERC721, ERC20 contracts and  frontend scripts
+# NFTStore -  Everything Can be turned into NFT
+
+## Basic ERC721, ERC20 contracts and  frontend scripts
 
 NFT-Store has deployed in MATIC mumbai network. 
 with  ERC20 Tokens to sell/buy, auction/bid, transfer ERC721 tokens
