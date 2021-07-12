@@ -437,13 +437,13 @@ const openTransferDialog = (e) => {
 	     title={listName}
 	   />
             </DialogContentText>
-	     <p>名称:</p>
+	     <p>name:</p>
 	     <input
 	      type="text"
 	      placeholder = {listName}
 	      onChange={(event)=>setTitle(event.target.value)}
             />
-	    <p>描述</p>
+	    <p>despriction</p>
 	    <input
 	      type="text"
 	      placeholder = {listDesc}
