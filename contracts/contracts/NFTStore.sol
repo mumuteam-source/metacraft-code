@@ -52,7 +52,13 @@ contract NFTStore is Context, ERC20 {
     returns (uint256) {
     return tokenAmounts[tokenId];
     }
-
+    function getTokenAmount1 (
+    uint256 tokenId 
+    )public
+    view
+    returns (uint256) {
+    return tokenAmounts[tokenId];
+    }
     function gettokenMints(
      uint256 tokenId
     )
