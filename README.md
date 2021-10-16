@@ -1,4 +1,10 @@
-NFT-Store has deployed in [polygon](https://polygon.technology)  mumbai network. 
+
+# NFTStore - Biance
+NFTStore launches BSC mainnet
+
+# NFTStore - polygon
+
+NFT-Store has deployed in [polygon](https://polygon.technology)  mumbai network.
 with  ERC20 Tokens to sell/buy, auction/bid, transfer ERC721 tokens,trade history
 
 # NFTStore -  Everything Can be turned into NFT
