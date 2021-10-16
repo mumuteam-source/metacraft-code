@@ -7,12 +7,36 @@ NFTStore launches BSC mainnet
 NFT-Store has deployed in [polygon](https://polygon.technology)  mumbai network.
 with  ERC20 Tokens to sell/buy, auction/bid, transfer ERC721 tokens,trade history
 
-# NFTStore -  Everything Can be turned into NFT
+# NFTStore 
 
-NFTStore.Top is a world leading multi-ecosystem, cross-chain one-stop service and trading platform
-NFTStore has Multiple NFT Data source and Creation Tools. include Video/Music/Picture Creation Tool,URL/Webpage Creation Tool,Browser Plugins,etc
+NFTStore.work is an NFT creation infrastructure and crowdfunding platform.
 
-## Basic ERC721, ERC20 contracts and  frontend scripts
+## Multi Data Source Support
+
+NFT creation infrastructure supports various data sources such as video, music, picture, etc
+
+## NFTStarter
+
+NFTStarter innovates the way people create NFT. It is a collaboration platform and solution for NFT crowdfunding.
+
+## NFT Trading System
+
+NFTStore has its own trading features that support transfer of NFT assets between accounts.
+
+
+## Innovative Creativity tools
+
+NFTStore has innovative creativity tools such as artificial intelligence to assist creators producing NFTs.
+
+## NFT Creation Tools
+
+NFTStore develops tools such as plugins for game engine, browser, websites and applications.
+
+## One Click Transfer of NFT Assets
+
+NFTStore connects with world leading trading platforms so that NFTs created on NFTStore can be delivered and traded on these platform instantly with one click.
+
+## Basic ERC721, ERC20 ,ERC1155 contracts and  frontend test scripts
 
 What's included:
 
