@@ -1,5 +1,5 @@
 
-# NFTStore - Biance
+# NFTStore - Binance
 NFTStore launches BSC mainnet
 
 # NFTStore - polygon
