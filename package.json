@@ -21,7 +21,8 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
     "web-vitals": "^1.0.1",
-    "web3": "^1.3.4"
+    "web3": "^1.3.4",
+    "state-pool": "^0.6.0"
   },
   "scripts": {
     "start": "PORT=5000 react-scripts start",
