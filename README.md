@@ -1,15 +1,15 @@
 
-# NFTStore - Binance
+# Metacraft - Binance
 NFTStore launches BSC mainnet
 
-# NFTStore - polygon
+# Metacraft - polygon
 
-NFT-Store has deployed in [polygon](https://polygon.technology)  mumbai network.
+Metacraft has deployed in [polygon](https://polygon.technology)  mumbai network.
 with  ERC20 Tokens to sell/buy, auction/bid, transfer ERC721 tokens,trade history
 
-# NFTStore 
+# Metacraft 
 
-NFTStore.work is an NFT creation infrastructure and crowdfunding platform.
+Metacraft.pro is an NFT creation infrastructure and crowdfunding platform.
 
 ## Multi Data Source Support
 
@@ -21,20 +21,20 @@ NFTStarter innovates the way people create NFT. It is a collaboration platform a
 
 ## NFT Trading System
 
-NFTStore has its own trading features that support transfer of NFT assets between accounts.
+Metacraft has its own trading features that support transfer of NFT assets between accounts.
 
 
 ## Innovative Creativity tools
 
-NFTStore has innovative creativity tools such as artificial intelligence to assist creators producing NFTs.
+Metacraft has innovative creativity tools such as artificial intelligence to assist creators producing NFTs.
 
 ## NFT Creation Tools
 
-NFTStore develops tools such as plugins for game engine, browser, websites and applications.
+Metacraft develops tools such as plugins for game engine, browser, websites and applications.
 
 ## One Click Transfer of NFT Assets
 
-NFTStore connects with world leading trading platforms so that NFTs created on NFTStore can be delivered and traded on these platform instantly with one click.
+Metacraft connects with world leading trading platforms so that NFTs created on Metacraft can be delivered and traded on these platform instantly with one click.
 
 ## Basic ERC721, ERC20 ,ERC1155 contracts and  frontend test scripts
 
@@ -46,7 +46,7 @@ This includes basic ERC721 / ERC20 for the purposes of demonstrating integration
 
 ### frontend scripts
 
-In addition to these template 721/20 contracts, we provide sample nftstore frontend script code.
+In addition to these template 721/20 contracts, we provide sample Metacraft frontend script code.
 
 ## Requirements
 
