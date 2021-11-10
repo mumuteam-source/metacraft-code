@@ -1,6 +1,6 @@
 
 # Metacraft - Binance
-NFTStore launches BSC mainnet
+Metacraft launches BSC mainnet
 
 # Metacraft - polygon
 
@@ -42,7 +42,7 @@ What's included:
 
 ### Sample ERC721/ERC20 Contracts
 
-This includes basic ERC721 / ERC20 for the purposes of demonstrating integration with the NFTStore marketplace. We include a frontend script for minting and listing the items in Nftstore.
+This includes basic ERC721 / ERC20 for the purposes of demonstrating integration with the Metacraft marketplace. We include a frontend script for minting and listing the items in Metacraft.
 
 ### frontend scripts
 
